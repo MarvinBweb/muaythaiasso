@@ -1,128 +1,6 @@
-/* MENU*/
-
-/* TABLEAU */
-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin-top: 1.5em;
-    background: #fafafa;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(243, 156, 18, 0.10);
-    overflow: hidden;
-    font-size: 1.08em;
-}
-
-th,
-td {
-    padding: 1em 0.7em;
-    text-align: center;
-}
-
-th {
-    background: #f39c12;
-    color: #fff;
-    font-size: 1.1em;
-    letter-spacing: 0.03em;
-    border: none;
-}
-
-tr:nth-child(even) td {
-    background: #fff6e3;
-}
-
-tr:nth-child(odd) td {
-    background: #fff;
-}
-
-tr:hover td {
-    background: #ffe0b2;
-    transition: background 0.2s;
-}
-
-td {
-    border: none;
-    color: #333;
-}
-
-tr:first-child th:first-child {
-    border-top-left-radius: 12px;
-}
-
-tr:first-child th:last-child {
-    border-top-right-radius: 12px;
-}
-
-tr:last-child td:first-child {
-    border-bottom-left-radius: 12px;
-}
-
-tr:last-child td:last-child {
-    border-bottom-right-radius: 12px;
-}
-
-/* HORAIRES */
-.horaires-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin-top: 1.5em;
-    background: #fafafa;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(243, 156, 18, 0.10);
-    overflow: hidden;
-    font-size: 1.08em;
-}
-
-.horaires-table th,
-.horaires-table td {
-    padding: 1em 0.7em;
-    text-align: center;
-}
-
-.horaires-table th {
-    background: #f39c12;
-    color: #fff;
-    font-size: 1.1em;
-    letter-spacing: 0.03em;
-    border: none;
-}
-
-.horaires-table tr:nth-child(even) td {
-    background: #fff6e3;
-}
-
-.horaires-table tr:nth-child(odd) td {
-    background: #fff;
-}
-
-.horaires-table tr:hover td {
-    background: #ffe0b2;
-    transition: background 0.2s;
-}
-
-.horaires-table td {
-    border: none;
-    color: #333;
-}
-
-.horaires-table tr:first-child th:first-child {
-    border-top-left-radius: 12px;
-}
-
-.horaires-table tr:first-child th:last-child {
-    border-top-right-radius: 12px;
-}
-
-.horaires-table tr:last-child td:first-child {
-    border-bottom-left-radius: 12px;
-}
-
-.horaires-table tr:last-child td:last-child {
-    border-bottom-right-radius: 12px;
-}
-
-/* background */
+/* ===============================
+   RESET & BASE
+================================= */
 * {
     margin: 0;
     padding: 0;
@@ -130,175 +8,226 @@ tr:last-child td:last-child {
 }
 
 body {
-    display: block;
     font-family: Arial, sans-serif;
-    background: #101010;
-    color: #333;
     line-height: 1.6;
-}
-
-/* HEADER */
-header {
-    position: sticky;
-    top: 0;
-    background: #222;
+    background-color: #101010;
     color: #fff;
-    padding: 1em;
-    text-align: center;
 }
 
-header h1 {
-    margin-bottom: 0.5em;
-    color: #f39c12;
+/* ===============================
+   HEADER / NAVBAR
+================================= */
+.navbar {
+    background-color: #222;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1.5em;
+.navbar-brand {
+    font-size: 1.5em;
 }
 
-nav a {
+.navbar-nav .nav-link {
     color: #fff;
-    text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-nav a:hover {
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
     color: #f39c12;
 }
 
-/* MAIN  */
-
+/* ===============================
+   MAIN
+================================= */
 main {
-    max-width: 1100px;
-    margin: 2em auto;
-    padding: 0 1em;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 2em;
 }
 
-/* CARDS */
-
-section {
-    background: #fff;
-    border-radius: 12px;
-    padding: 1.5em;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+main h1 {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+    color: #f39c12;
 }
 
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+main p {
+    font-size: 1.2em;
+    margin-bottom: 2rem;
 }
 
-section h2 {
-    margin-bottom: 0.8em;
-    color: #222;
-}
-
-
-/* ARTICLES */
-
-.article {
-    background: #ffe0b2;
-    ;
-    border-radius: 12px;
-    padding: 1.5em;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2em;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.article .date {
-    font-size: 0.9em;
-    color: #888;
-    margin-bottom: 0.5em;
-}
-
-.article h2 {
-    margin-bottom: 0.8em;
-    color: #222;
-}
-
-.article p {
-    margin-bottom: 1em;
-    color: #555;
-}
-
-/* IMAGES */
-section img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 1em;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* BUTTON */
-.button {
-    display: inline-block;
-    margin-top: 1em;
-    padding: 0.8em 1.5em;
-    background: #f39c12;
-    color: #fff;
+/* ===============================
+   BUTTON
+================================= */
+.btn-primary {
+    background: linear-gradient(90deg, #f39c12 60%, #b71c1c 100%);
+    border: none;
+    padding: 0.8em 2em;
     font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.3s, transform 0.2s;
+    border-radius: 10px;
+    transition: all 0.3s;
 }
 
-.button:hover {
-    background: #d35400;
+.btn-primary:hover {
+    background: linear-gradient(90deg, #b71c1c 60%, #f39c12 100%);
     transform: scale(1.05);
 }
 
-/* FOOTER */
+/* ===============================
+   FOOTER
+================================= */
 footer {
+    background-color: #222;
+    color: #fff;
     text-align: center;
     padding: 1.5em;
-    margin-top: 2em;
-    background: #222;
-    color: #fff;
     font-size: 0.9em;
 }
 
-/*FORM */
-#contact {
-    background-color: #ffe0b2;
-}
-
-.form {
-    max-width: 400px;
-    margin: 2em auto 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-
-}
-
-/*LOGO*/
-
-
-
-.logo {
-    display: block;
-    max-width: 500px;
+/* ===============================
+   IMAGE / LOGO
+================================= */
+main img {
+    max-width: 200px;
     width: 100%;
     height: auto;
-    margin: 2em auto 1.5em auto;
+    margin-bottom: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
-    background: #fff;
-    padding: 0.5em;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
 
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 768px) {
+    main {
+        padding: 1em;
+    }
+
+    main h1 {
+        font-size: 2em;
+    }
+
+    main p {
+        font-size: 1em;
+    }
+
+    .btn-primary {
+        padding: 0.6em 1.5em;
+        font-size: 0.95em;
+    }
+}
+/* =========================================
+   RÉINITIALISATION ET BASE
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Couleur douce pour le fond */
+    color: #333;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+.navbar {
+    padding: 0.8rem 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #f39c12 !important;
+}
+
+/* =========================================
+   SECTIONS PRINCIPALES
+========================================= */
+section {
+    padding: 3rem 0;
+}
+
+section h1,
+section h2 {
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Images */
+.img-fluid {
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Sections alternées */
+.flex-lg-row-reverse {
+    flex-direction: row-reverse !important;
+}
+
+/* =========================================
+   BOUTONS
+========================================= */
+.btn-primary {
+    background-color: #f39c12;
+    border: none;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    background-color: #d35400;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 992px) {
+    section {
+        text-align: center;
+    }
+    
+    .flex-lg-row-reverse {
+        flex-direction: column !important;
+    }
+
+    section img {
+        margin-bottom: 1.5rem;
+    }
 }
